@@ -9,6 +9,7 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -50,6 +51,10 @@ import absensi.anif.its.ac.id.sikemastcfordosen.utilities.VolleySingleton;
 
 public class PenjadwalanUlang extends AppCompatActivity implements
         DatePickerDialog.OnDateSetListener {
+
+    static {
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
+    }
 
     private String[] progressState = {"Tanggal", "Waktu", "Ruangan", "Konfirmasi"};
     private final String TAG = PenjadwalanUlang.class.getSimpleName();
@@ -107,7 +112,7 @@ public class PenjadwalanUlang extends AppCompatActivity implements
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                showAlertDialog(R.id.btn_batalkan_perubahan);
             }
         });
 
@@ -133,6 +138,9 @@ public class PenjadwalanUlang extends AppCompatActivity implements
         clPilihRuangan = (ConstraintLayout) findViewById(R.id.cl_pilih_ruangan);
         cvMataKuliahBaru = (CardView) findViewById(R.id.cv_mata_kuliah_baru);
         cvMataKuliah = (CardView) findViewById(R.id.cv_mata_kuliah);
+
+        btnPilihTanggal.setCompoundDrawablesWithIntrinsicBounds(null, ContextCompat.getDrawable(this,
+                R.drawable.ic_today_black), null, null);
 
         btnPilihTanggal.setOnClickListener(operate);
         btnNextToWaktu.setOnClickListener(operate);
@@ -278,7 +286,7 @@ public class PenjadwalanUlang extends AppCompatActivity implements
 
     private void showPerubahanJadwal() {
         TextView tvPertemuanKe = (TextView) findViewById(R.id.tv_pertemuan_ke_baru);
-        TextView tvKodePerkuliahan = (TextView) findViewById(R.id.tv_kode_matakuliah);
+        TextView tvKodePerkuliahan = (TextView) findViewById(R.id.tv_kode_matakuliah_baru);
         TextView tvNamaMk = (TextView) findViewById(R.id.tv_matakuliah_baru);
         TextView tvKelas = (TextView) findViewById(R.id.tv_kelas_lama);
 
@@ -328,6 +336,7 @@ public class PenjadwalanUlang extends AppCompatActivity implements
                             String kodeMk = kelas.getString("kode_matakuliah");
                             String namaMk = kelas.getString("nama_kelas");
                             Log.d(TAG, namaMk);
+                            Log.d(TAG, kodeMk);
                             JSONObject ruangan = list.getJSONObject("ruangan");
                             String namaRuangan = ruangan.getString("nama");
                             perkuliahanTerpilih = new Perkuliahan(idPerkuliahan, kodeMk, namaMk,
@@ -569,5 +578,10 @@ public class PenjadwalanUlang extends AppCompatActivity implements
         }
         AlertDialog dialog = builder.create();
         dialog.show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        showAlertDialog(R.id.btn_batalkan_perubahan);
     }
 }

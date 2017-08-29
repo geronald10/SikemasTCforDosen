@@ -118,9 +118,9 @@ public class HalamanUtamaDosen extends BaseActivity implements
 
         showLoading();
 
-        getSupportLoaderManager().initLoader(ID_LIST_PERKULIAHAN_LOADER, null, this);
-
         SikemasSyncUtils.startImmediatePerkuliahanSync(this);
+
+        getSupportLoaderManager().initLoader(ID_LIST_PERKULIAHAN_LOADER, null, this);
 
         if (!mSwipeRefreshLayout.isRefreshing()) {
             showLoading();
