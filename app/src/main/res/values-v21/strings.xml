@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Sikemas IF</string>
     <string name="greetings_pagi">Selamat Pagi,</string>
@@ -32,7 +33,6 @@
     <string name="tv_empty_value">-</string>
     <string name="judul_jadwal_kosong">Jadwal Perkuliahan tidak ditemukan</string>
     <string name="subjudul_jadwal_kosong">Jadwal perkuliahan hari ini tidak ditemukan, kemungkinan Anda tidak memiliki jam mengampu mata kuliah hari ini (libur).</string>
-    <string name="subjudul_jadwal_kosong_mahasiswa">Jadwal perkuliahan hari ini tidak ditemukan, kemungkinan Anda tidak memiliki jadwal perkuliahan hari ini atau libur.</string>
     <string name="btn_lihat_peserta">Lihat PESERTA</string>
     <string name="btn_lihat_kehadiran">Lihat Kehadiran</string>
     <string name="status_belum_aktif">Belum Aktif</string>
@@ -85,8 +85,7 @@
     <string name="tambah_data_set_wajah">Daftarkan Data Wajah</string>
     <string name="sinkronisasi_data_set_wajah">Sinkronisasi</string>
     <string name="wajah_terambil_label">Wajah Terambil</string>
-    <string name="menambah_data_set_wajah_dari_message">Menambah data wajah dari:</string>
-    <string name="training_data_set_wajah_btn_label">Latih Data Wajah</string>
+    <string name="menambah_data_set_wajah_dari_message">Mendaftarkan data wajah dari:</string>
     <string name="memproses_data_set_title">Memproses Data Wajah…</string>
     <string name="tv_email_empty_view"><![CDATA[<email>]]></string>
     <string name="tv_id_pengguna_empty_view"><![CDATA[<id_pengguna>]]></string>
@@ -107,7 +106,6 @@
     <string name="email_nrp_prompt_label">Email / NRP</string>
     <string name="perkuliahan_belum_aktif">Perkuliahan Belum Aktif</string>
     <string name="perkuliahan_aktif">Perkuliahan Sedang Aktif</string>
-    <string name="perkuliahan_berakhir">Perkuliahan Telah Berakhir</string>
     <string name="perkuliahan_ditunda">Perkuliahan Ditunda</string>
     <string name="tv_status_ijin_label">I\nJ\nI\nN</string>
     <string name="tv_status_absen_label">A\nB\nS\nE\nN</string>
@@ -131,31 +129,9 @@
     <string name="konfirmasi_perubahan_btn_label">Simpan Perubahan</string>
     <string name="batalkan_perubahan_btn_label">Batalkan Perubahan</string>
     <string name="pilih_ruangan_label">Pilih Ruangan</string>
-    <string name="kelola_data_set_tanda_tangan">Kelola Data set tanda tangan</string>
-    <string name="tambah_data_set_tanda_tangan">TAMBAH DATA SET TANDA TANGAN</string>
-    <string name="tanda_tangan_disini">TANDA TANGAN DISINI</string>
-    <string name="batal_tandatangan">TUTUP</string>
-    <string name="hapus_tandatangan">HAPUS</string>
-    <string name="simpan_tandatangan">KIRIM</string>
-    <string name="unduh_dataset_tanda_tangan">UNDUH DATASET</string>
-    <string name="header_tambah_dataset_ttd">TANDA TANGAN SEBANYAK 5 KALI</string>
-    <string name="upload_file">UNGGAH DATASET</string>
-    <string name="jumlah_data_set_tersimpan">Jumlah Dataset Tersimpan</string>
-    <string name="locationService">Location Service</string>
     <string name="alasan_ijin_kehadiran_label">Alasan ijin kehadiran</string>
     <string name="status_kehadiran_label">Pilih Status kehadiran</string>
     <string name="ubah_kehadiran_message">Apakah Anda yakin ingin mengubah status kehadiran dari:</string>
-
-    <string name="label_status">Status</string>
-
-    <!-- Strings related to QR SCanner-->
-    <string name="scan_barcode_button">Scan QR</string>
-    <string name="no_barcode_captured">Tidak Terdeteksi</string>
-    <string name="barcode_error_format">"Error reading barcode: %1$s"</string>
-    <string name="ok">OK</string>
-    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
-    <string name="no_camera_permission">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
-    <string name="low_storage_error">Face detector dependencies cannot be downloaded due to low device storage</string>
     <string name="berita_acara_title">Berita Acara</string>
     <string name="tambah_berita_caption">Tambah berita</string>
     <string name="deskripsi_hint">Deskripsi</string>

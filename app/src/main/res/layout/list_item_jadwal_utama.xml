@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp">
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <ImageView
+        android:id="@+id/calendar_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="0dp"
+        android:contentDescription="@string/calendar_icon_string"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_empty_date" />
+
+    <TextView
+        android:id="@+id/tv_tanggal_pertemuan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/tv_empty_value"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        app:layout_constraintLeft_toRightOf="@+id/calendar_icon"
+        app:layout_constraintRight_toLeftOf="@+id/iv_ruang_icon"
+        app:layout_constraintTop_toTopOf="@+id/calendar_icon" />
+
+    <TextView
+        android:id="@+id/tv_mata_kuliah"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/tv_empty_value"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorSecondaryText"
+        app:layout_constraintLeft_toRightOf="@+id/calendar_icon"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tanggal_pertemuan" />
+
+    <TextView
+        android:id="@+id/tv_ruang_kuliah"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="start"
+        android:text="@string/tv_empty_value"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="16sp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/iv_ruang_icon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_ruang_icon" />
+
+    <TextView
+        android:id="@+id/tv_waktu_kuliah"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="start"
+        android:text="@string/tv_empty_value"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/iv_waktu_icon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_waktu_icon" />
+
+    <ImageView
+        android:id="@+id/iv_ruang_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/ruang_icon_desc"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_vertical"
+        app:layout_constraintTop_toTopOf="@+id/tv_tanggal_pertemuan"
+        app:srcCompat="@drawable/ic_room" />
+
+    <ImageView
+        android:id="@+id/iv_waktu_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/waktu_icon_desc"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ruang_kuliah"
+        app:srcCompat="@drawable/ic_access_time" />
+
+</android.support.constraint.ConstraintLayout>
