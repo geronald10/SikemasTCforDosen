@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@android:color/white"
+    android:theme="@style/AppLoginMaterialTheme"
     tools:context=".activity.LoginActivity">
 
     <android.support.constraint.ConstraintLayout
@@ -18,7 +19,7 @@
             android:layout_marginTop="40dp"
             android:text="@string/welcome_message_1"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -35,20 +36,21 @@
             android:gravity="center"
             android:text="@string/welcome_message_2"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_welcome_message" />
+            app:layout_constraintTop_toBottomOf="@id/tv_welcome_message" />
 
         <ImageView
             android:id="@+id/iv_logo_sikemas"
             android:layout_width="164dp"
             android:layout_height="120dp"
             android:layout_marginTop="24dp"
+            android:contentDescription="@string/login_title"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_welcome_message_2"
-            app:srcCompat="@drawable/logo_sikemas" />
+            app:srcCompat="@drawable/logo_sikemas_v2" />
 
         <TextView
             android:id="@+id/tv_login"
@@ -60,6 +62,7 @@
             android:paddingStart="8dp"
             android:text="@string/login_title"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/colorPrimaryText"
             android:textSize="36sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -69,16 +72,18 @@
             android:id="@+id/iv_line_2"
             android:layout_width="0dp"
             android:layout_height="3dp"
+            android:contentDescription="@string/underline"
             app:layout_constraintLeft_toLeftOf="@+id/tv_login"
             app:layout_constraintRight_toRightOf="@+id/tv_login"
             app:layout_constraintTop_toBottomOf="@+id/tv_login"
-            app:srcCompat="@color/colorAccent" />
+            app:srcCompat="@color/colorPrimaryDark" />
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/layout_email_login"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:textColorHint="@color/colorPrimaryDark"
             app:layout_constraintLeft_toLeftOf="@+id/tv_welcome_message_2"
             app:layout_constraintRight_toRightOf="@+id/tv_welcome_message_2"
             app:layout_constraintTop_toBottomOf="@+id/iv_line_2">
@@ -87,10 +92,10 @@
                 android:id="@+id/edt_email_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/email_nrp_prompt_label"
+                android:hint="@string/email_prompt_label"
                 android:imeOptions="actionNext"
                 android:inputType="textEmailAddress"
-                android:textColor="@android:color/white" />
+                android:textColor="@color/colorPrimaryText"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -98,6 +103,7 @@
             android:id="@+id/layout_password_login"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:textColorHint="@color/colorPrimaryDark"
             app:layout_constraintLeft_toLeftOf="@id/tv_welcome_message_2"
             app:layout_constraintRight_toRightOf="@id/tv_welcome_message_2"
             app:layout_constraintTop_toBottomOf="@id/layout_email_login">
@@ -109,7 +115,7 @@
                 android:hint="@string/password_prompt_label"
                 android:imeOptions="actionDone"
                 android:inputType="textPassword"
-                android:textColor="@android:color/white" />
+                android:textColor="@color/colorPrimaryText" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -120,8 +126,9 @@
             android:layout_marginTop="16dp"
             android:text="@string/sign_in_button"
             android:textAppearance="@style/TextAppearance.AppCompat.Button"
-            android:textColor="@color/colorPrimaryText"
+            android:textColor="@android:color/white"
             android:textSize="16sp"
+            android:theme="@style/ListKelasButtonPermanenTheme"
             app:layout_constraintLeft_toLeftOf="@id/tv_welcome_message_2"
             app:layout_constraintRight_toRightOf="@id/tv_welcome_message_2"
             app:layout_constraintTop_toBottomOf="@id/layout_password_login" />

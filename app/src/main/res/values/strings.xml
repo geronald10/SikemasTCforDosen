@@ -11,7 +11,7 @@
     <string name="email_prompt_label">Email</string>
     <string name="password_prompt_label">Password</string>
     <string name="sign_in_button">Masuk</string>
-    <string name="login_title">Akun Masuk</string>
+    <string name="login_title">Login Dosen</string>
     <string name="welcome_message_2">Sistem Kehadiran Mahasiswa\nTeknik Informatika ITS</string>
     <string name="welcome_message_1">Selamat Datang</string>
 
@@ -191,4 +191,5 @@
     <string name="kelas_caption">Kelas</string>
     <string name="jadwal_kelas_not_found_string">Jadwal Kelas Diampu kosong</string>
     <string name="jadwal_not_found_content">Jadwal kelas yang Anda ampu tidak ditemukan, kemungkinan jadwal Anda masih kosong / belum dimasukkan</string>
+    <string name="underline">underline</string>
 </resources>
